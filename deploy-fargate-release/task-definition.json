@@ -1,0 +1,71 @@
+{
+  "family": "your-family-name",
+  "taskRoleArn": null,
+  "executionRoleArn": "arn:aws:iam::00000:role/ecsTaskExecutionRole",
+  "networkMode": "awsvpc",
+  "containerDefinitions": [
+    {
+      "name": "your-container-name",
+      "image": "00000.dkr.ecr.ap-northeast-2.amazonaws.com/your-ecr:latest",
+      "cpu": 0,
+      "memory": null,
+      "memoryReservation": null,
+      "links": null,
+      "portMappings": [
+        {
+          "containerPort": 8080,
+          "hostPort": 8080,
+          "protocol": "tcp"
+        }
+      ],
+      "essential": true,
+      "entryPoint": null,
+      "command": null,
+      "environment": [],
+      "environmentFiles": null,
+      "mountPoints": [],
+      "volumesFrom": [],
+      "linuxParameters": null,
+      "secrets": null,
+      "dependsOn": null,
+      "startTimeout": null,
+      "stopTimeout": null,
+      "hostname": null,
+      "user": null,
+      "workingDirectory": null,
+      "disableNetworking": null,
+      "privileged": null,
+      "readonlyRootFilesystem": null,
+      "dnsServers": null,
+      "dnsSearchDomains": null,
+      "extraHosts": null,
+      "dockerSecurityOptions": null,
+      "interactive": null,
+      "pseudoTerminal": null,
+      "dockerLabels": null,
+      "ulimits": null,
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "your-log-group",
+          "awslogs-region": "ap-northeast-2",
+          "awslogs-stream-prefix": "ecs"
+        },
+        "secretOptions": null
+      },
+      "healthCheck": null,
+      "systemControls": null,
+      "resourceRequirements": null,
+      "firelensConfiguration": null
+    }
+  ],
+  "volumes": [],
+  "placementConstraints": [],
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "4096",
+  "memory": "8192",
+  "pidMode": null,
+  "ipcMode": null,
+  "proxyConfiguration": null,
+  "inferenceAccelerators": null
+}
